@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/acuyjet/ztracker/issues"
   },
-  "homepage": "https://github.com/acuyjet/ztracker#readme"
+  "homepage": "https://github.com/acuyjet/ztracker#readme",
+  "dependencies": {
+    "express": "^4.15.2"
+  }
 }
