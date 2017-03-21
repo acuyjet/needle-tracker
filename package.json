@@ -1,0 +1,27 @@
+{
+  "name": "ztracker",
+  "version": "1.0.0",
+  "description": "Fitness challenge tracking app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acuyjet/ztracker.git"
+  },
+  "keywords": [
+    "javascript",
+    "mean-stack",
+    "code-louisville",
+    "ztracker",
+    "fitness",
+    "tracker"
+  ],
+  "author": "Allison Cuyjet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acuyjet/ztracker/issues"
+  },
+  "homepage": "https://github.com/acuyjet/ztracker#readme"
+}
