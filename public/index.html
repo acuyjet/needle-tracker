@@ -2,9 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!--Import Google Icon Font-->
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <title>zTracker</title>
 </head>
 <body>
-    <h1>Nothing here yet!</h1>
+<div class="container">
+    <div class="row">
+        <div class="col s12">
+            <h1>ZCorp Fitness Challenge Activity Tracker</h1>
+        </div>
+    </div>
+    <div class="row">
+        <h5>Enter Activity:</h5>
+    </div>
+    <div class="row">
+        <form class="col s12">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="name" type="text" class="validate">
+                    <label for="name">Name</label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <select>
+                        <option value="" disabled selected>Department</option>
+                        <option value="accounting">Accounting</option>
+                        <option value="it">IT</option>
+                        <option value="facilities">Facilities</option>
+                        <option value="marketing">Marketing</option>
+                        <option value="operations">Operations</option>
+                        <option value="sales">Sales</option>
+                    </select>
+                    <label></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <select>
+                        <option value="" disabled selected>Activity</option>
+                        <option value="operations">Cycling</option>
+                        <option value="accounting">Gym</option>
+                        <option value="it">Running</option>
+                        <option value="facilities">Walking</option>
+                        <option value="marketing">Yoga</option>
+                        <option value="sales">Other</option>
+                    </select>
+                    <label></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s2">
+                    <input id="duration" type="text" class="validate">
+                    <label for="duration">Duration (minutes)</label>
+                </div>
+            </div>
+        </form>
+        <div class="row">
+            <div class="col s12">
+                <h5><a href="leaderboard.html">View Leaderboard</a></h5>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--Import jQuery before materialize.js-->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script type="text/javascript" src="js/site.js"></script>
 </body>
 </html>
