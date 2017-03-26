@@ -274,7 +274,7 @@ m.isFunction(t)&&t(null,!0)}),f.queue(a,m.isString(v)?v:"",[])),"stop"===y?(i(a)
 
 
 /*
- * raf.js
+ * raf.scripts
  * https://github.com/ngryman/raf.js
  *
  * original requestAnimationFrame polyfill by Erik Möller
@@ -2714,7 +2714,7 @@ if (jQuery) {
  * Extend jquery with a scrollspy plugin.
  * This watches the window scroll and fires events when elements are scrolled into viewport.
  *
- * throttle() and getTime() taken from Underscore.js
+ * throttle() and getTime() taken from Underscore.scripts
  * https://github.com/jashkenas/underscore
  *
  * @author Copyright 2013 John Smart
@@ -4937,7 +4937,7 @@ if (jQuery) {
 
 })(jQuery);
 ;/*!
- * pickadate.js v3.5.0, 2014/04/13
+ * pickadate.scripts v3.5.0, 2014/04/13
  * By Amsul, http://amsul.ca
  * Hosted on http://amsul.github.io/pickadate.js
  * Licensed under MIT
@@ -4949,7 +4949,7 @@ if (jQuery) {
     if ( typeof define == 'function' && define.amd )
         define( 'picker', ['jquery'], factory )
 
-    // Node.js/browserify.
+    // Node.scripts/browserify.
     else if ( typeof exports == 'object' )
         module.exports = factory( require('jquery') )
 
@@ -6060,7 +6060,7 @@ return PickerConstructor
 
 
 ;/*!
- * Date picker for pickadate.js v3.5.0
+ * Date picker for pickadate.scripts v3.5.0
  * http://amsul.github.io/pickadate.js/date.htm
  */
 
@@ -6070,9 +6070,9 @@ return PickerConstructor
     if ( typeof define == 'function' && define.amd )
         define( ['picker', 'jquery'], factory )
 
-    // Node.js/browserify.
+    // Node.scripts/browserify.
     else if ( typeof exports == 'object' )
-        module.exports = factory( require('./picker.js'), require('jquery') )
+        module.exports = factory( require('./picker.scripts'), require('jquery') )
 
     // Browser globals.
     else factory( Picker, jQuery )
