@@ -1,8 +1,10 @@
 'use strict';
 
 var express = require('express');
-var router = require('./src/api/index');
+var router = require('./api/index');
 var app = express();
+
+require('./database');
 
 // Serve static files
 app.use('/', express.static('public'));

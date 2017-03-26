@@ -25,6 +25,9 @@
   },
   "homepage": "https://github.com/acuyjet/ztracker#readme",
   "dependencies": {
-    "express": "^4.15.2"
+    "angular": "^1.6.3",
+    "express": "^4.15.2",
+    "mongodb": "^2.2.25",
+    "mongoose": "^4.9.2"
   }
 }
