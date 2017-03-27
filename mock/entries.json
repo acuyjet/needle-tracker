@@ -2,25 +2,25 @@
   {
   "name": "Janice",
   "department": "Accounting",
-  "activity": "Running",
+  "type": "Running",
   "duration": 84
   },
   {
     "name": "Ken",
     "department": "IT",
-    "activity": "Gym",
+    "type": "Gym",
     "duration": 45
   },
   {
     "name": "Howard",
     "department": "Facilities",
-    "activity": "Yoga",
+    "type": "Yoga",
     "duration": 63
   },
   {
     "name": "Christina",
     "department": "Operations",
-    "activity": "Other",
+    "type": "Other",
     "duration": 52
   }
 ]

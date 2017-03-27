@@ -45,7 +45,7 @@
             <div class="row">
                 <div class="input-field col s6">
                     <select>
-                        <option value="" disabled selected>Activity</option>
+                        <option value="" disabled selected>Activity Type</option>
                         <option value="operations">Cycling</option>
                         <option value="accounting">Gym</option>
                         <option value="it">Running</option>
@@ -58,6 +58,10 @@
             </div>
             <div class="row">
                 <div class="input-field col s2">
+                    <input type="date" id="date" class="datepicker">
+                    <label for="date">Date</label>
+                </div>
+                <div class="input-field col s2 offset-s2">
                     <input id="duration" type="text" class="validate">
                     <label for="duration">Duration (minutes)</label>
                 </div>
