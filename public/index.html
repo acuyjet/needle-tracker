@@ -8,70 +8,86 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <title>zTracker</title>
+    <title>Needle Tracker</title>
 </head>
-<body ng-app="zTracker">
+<body ng-app="needle-tracker">
 <div class="container">
     <div class="row">
-        <div class="col s12">
-            <h1>ZCorp Fitness Challenge Activity Tracker</h1>
-        </div>
+        <h5>Knitting Needle Inventory</h5>
     </div>
     <div class="row">
-        <h5>Enter Activity:</h5>
+        <p>Instead of accidentally buying your fifth set of size 7 16" circulars because you have no idea what you've
+            got in your stash, enter your tools here:</p>
     </div>
     <div class="row">
         <form class="col s12">
             <div class="row">
-                <div class="input-field col s6">
-                    <input id="name" type="text" class="validate">
-                    <label for="name">Name</label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <select>
-                        <option value="" disabled selected>Department</option>
-                        <option value="accounting">Accounting</option>
-                        <option value="it">IT</option>
-                        <option value="facilities">Facilities</option>
-                        <option value="marketing">Marketing</option>
-                        <option value="operations">Operations</option>
-                        <option value="sales">Sales</option>
-                    </select>
-                    <label></label>
-                </div>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <select>
-                        <option value="" disabled selected>Activity Type</option>
-                        <option value="operations">Cycling</option>
-                        <option value="accounting">Gym</option>
-                        <option value="it">Running</option>
-                        <option value="facilities">Walking</option>
-                        <option value="marketing">Yoga</option>
-                        <option value="sales">Other</option>
-                    </select>
-                    <label></label>
-                </div>
-            </div>
-            <div class="row">
                 <div class="input-field col s2">
-                    <input type="date" id="date" class="datepicker">
-                    <label for="date">Date</label>
+                    <select>
+                        <option value="" disabled selected>Size</option>
+                        <option value="US 00">US 00</option>
+                        <option value="US 0">US 0</option>
+                        <option value="US 1">US 1</option>
+                        <option value="US 1 1/2">US 1 1/2</option>
+                        <option value="US 2">US 2</option>
+                        <option value="US 2 1/2">US 2 1/2</option>
+                        <option value="US 3">US 3</option>
+                        <option value="US 4">US 4</option>
+                        <option value="US 5">US 5</option>
+                        <option value="US 6">US 6</option>
+                        <option value="US 7">US 7</option>
+                        <option value="US 8">US 8</option>
+                        <option value="US 9">US 9</option>
+                        <option value="US 10">US 10</option>
+                        <option value="US 10 1/2">US 10 1/2</option>
+                        <option value="US 11">US 11</option>
+                        <option value="US 13">US 13</option>
+                        <option value="US 15">US 15</option>
+                        <option value="US 17">US 17</option>
+                        <option value="US 19">US 19</option>
+                        <option value="US 35">US 35</option>
+                        <option value="US 50">US 50</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label></label>
                 </div>
-                <div class="input-field col s2 offset-s2">
-                    <input id="duration" type="text" class="validate">
-                    <label for="duration">Duration (minutes)</label>
+            </div>
+            <div class="row">
+                <div class="input-field col s4">
+                    <select>
+                        <option value="" disabled selected>Type</option>
+                        <option value="circular">Circular</option>
+                        <option value="double_pointed">Double-pointed</option>
+                        <option value="straight">Straight</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label></label>
                 </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s4">
+                    <select>
+                        <option value="" disabled selected>Material</option>
+                        <option value="bamboo">Bamboo</option>
+                        <option value="plastic">Plastic</option>
+                        <option value="metal">Metal</option>
+                        <option value="wood">Wood</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label></label>
+                </div>
+            </div>
+            <div class="row">
+                <div class="input-field col s6">
+                    <textarea id="notes" class="materialize-textarea"></textarea>
+                    <label for="notes">Notes:</label>
+                </div>
+            </div>
+            <div class="row">
+                <button class="btn waves-effect waves-light" type="submit" name="action">Submit
+                </button>
             </div>
         </form>
-        <div class="row">
-            <div class="col s12">
-                <h5><a href="leaderboard.html">View Leaderboard</a></h5>
-            </div>
-        </div>
     </div>
 </div>
     <!--Scripts-->

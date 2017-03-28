@@ -3,7 +3,7 @@
 var mongoose = require('mongoose');
 
 // Connect to database
-mongoose.connect('mongodb://localhost/ztracker', function(err) {
+mongoose.connect('mongodb://localhost/needle-tracker', function(err) {
 	if(err) {
 		console.log('Connection to database failed!');
 	} else {

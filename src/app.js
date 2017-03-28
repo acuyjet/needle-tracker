@@ -5,6 +5,7 @@ var router = require('./api/index');
 var app = express();
 
 require('./database');
+require('./seed');
 
 // Serve static files
 app.use('/', express.static('public'));
