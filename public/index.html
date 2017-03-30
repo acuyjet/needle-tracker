@@ -11,7 +11,7 @@
     <title>Needle Tracker</title>
 </head>
 <body ng-app="needle-tracker">
-<div class="container">
+<div ng-controller="mainCtrl" class="container">
     <div class="row">
         <h5>Knitting Needle Inventory</h5>
     </div>
@@ -84,13 +84,13 @@
                 </div>
             </div>
             <div class="row">
-                <button class="btn waves-effect waves-light save" type="submit" name="action">Save
+                <button ng-click="saveForm()" class="btn waves-effect waves-light save" type="submit" name="action">Save
                 </button>
             </div>
         </form>
         <div class="needle-list col s12">Your needles:
             <ul>
-                <li class="row"><a class="waves-effect waves-teal btn-flat edit">Edit</a><a
+                <li class="row"><a ng-click="editNeedle()" class="waves-effect waves-teal btn-flat edit">Edit</a><a ng-click="deleteNeedle()"
                         class="waves-effect waves-red btn-flat delete">Delete</a> A needle goes here</li>
             </ul>
         </div>
