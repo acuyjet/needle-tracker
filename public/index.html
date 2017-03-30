@@ -20,66 +20,22 @@
             got in your stash, enter your tools here:</p>
     </div>
     <div class="row">
-        <form class="needle-entry col s12">
-            <div class="row">
-                <div class="input-field col s2">
-                    <select>
-                        <option value="" disabled selected>Size</option>
-                        <option value="US 00">US 00</option>
-                        <option value="US 0">US 0</option>
-                        <option value="US 1">US 1</option>
-                        <option value="US 1 1/2">US 1 1/2</option>
-                        <option value="US 2">US 2</option>
-                        <option value="US 2 1/2">US 2 1/2</option>
-                        <option value="US 3">US 3</option>
-                        <option value="US 4">US 4</option>
-                        <option value="US 5">US 5</option>
-                        <option value="US 6">US 6</option>
-                        <option value="US 7">US 7</option>
-                        <option value="US 8">US 8</option>
-                        <option value="US 9">US 9</option>
-                        <option value="US 10">US 10</option>
-                        <option value="US 10 1/2">US 10 1/2</option>
-                        <option value="US 11">US 11</option>
-                        <option value="US 13">US 13</option>
-                        <option value="US 15">US 15</option>
-                        <option value="US 17">US 17</option>
-                        <option value="US 19">US 19</option>
-                        <option value="US 35">US 35</option>
-                        <option value="US 50">US 50</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <label></label>
-                </div>
+        <form class="needle-entry">
+            <div class="input-field inline">
+                <input ng-model="needle.size" id="size" type="text" placeholder="Size">
+                <label for="size"></label>
             </div>
-            <div class="row">
-                <div class="input-field col s4">
-                    <select>
-                        <option value="" disabled selected>Type</option>
-                        <option value="circular">Circular</option>
-                        <option value="double_pointed">Double-pointed</option>
-                        <option value="straight">Straight</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <label></label>
-                </div>
+            <div class="input-field inline">
+                <input ng-model="needle.type" id="type" type="text" placeholder="Type">
+                <label for="type"></label>
             </div>
-            <div class="row">
-                <div class="input-field col s4">
-                    <select>
-                        <option value="" disabled selected>Material</option>
-                        <option value="bamboo">Bamboo</option>
-                        <option value="plastic">Plastic</option>
-                        <option value="metal">Metal</option>
-                        <option value="wood">Wood</option>
-                        <option value="other">Other</option>
-                    </select>
-                    <label></label>
-                </div>
+            <div class="input-field inline">
+                <input ng-model="needle.material "id="material" type="text" placeholder="Material">
+                <label></label>
             </div>
             <div class="row">
                 <div class="input-field col s6">
-                    <textarea id="notes" class="materialize-textarea"></textarea>
+                    <textarea ng-model="needle.notes" id="notes" class="materialize-textarea"></textarea>
                     <label for="notes">Notes:</label>
                 </div>
             </div>
@@ -89,9 +45,19 @@
             </div>
         </form>
         <div class="needle-list col s12">Your needles:
-            <ul>
-                <li class="row"><a ng-click="editNeedle()" class="waves-effect waves-teal btn-flat edit">Edit</a><a ng-click="deleteNeedle()"
-                        class="waves-effect waves-red btn-flat delete">Delete</a> A needle goes here</li>
+            <ul class="collection">
+                <li class="collection-item">
+                    {{needle.size}}
+                    <br>
+                    {{needle.type}}
+                    <br>
+                    {{needle.material}}
+                    <br>
+                    {{needle.notes}}
+                    <a ng-click="deleteNeedle()" class="secondary-content waves-effect waves-red btn-flat delete">Delete</a>
+                    <a ng-click="editing = !editing"
+                        class=" secondary-content waves-effect waves-teal btn-flat edit">Edit</a>
+                </li>
             </ul>
         </div>
     </div>
