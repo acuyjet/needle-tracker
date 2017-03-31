@@ -1,4 +1,8 @@
 
 .collection .collection-item {
-    padding-bottom: 40px;
+    padding: 30px 20px 40px 20px;
+}
+
+.needle-list {
+    margin-top: 40px;
 }
