@@ -17,11 +17,11 @@ MongoDB
 
         cd needle-tracker
     
-3. Run `npm install`
+3. Run `npm install`.
 
-4. In a new command line tab, start `mongodb`
+4. In a new command line tab, start `mongodb`.
 
-5. In another tab, run `node src/app.js`
+5. In another tab, run `node src/app.js`.
 
 6. Open a browser window and go to `localhost:3000`.
 
