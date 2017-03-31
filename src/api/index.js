@@ -1,7 +1,7 @@
 'use strict';
 
 var express = require('express');
-var Needle = require('../models/needle');
+var Needle = require('../models/needle.model');
 //var needles = require('../../mock/needles.json'); // Mock data
 
 var router = express.Router();

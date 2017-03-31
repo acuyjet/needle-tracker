@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('needle-tracker')
-	.controller('mainCtrl', function($scope, dataService) {
+	.controller('mainCtrl', function($scope, $http, dataService) {
 
 		// Get list of needles
 		dataService.getNeedles(function(response) {
@@ -23,6 +23,7 @@ angular.module('needle-tracker')
 		// Save a needle
 		$scope.saveNeedle = function(needle) {
 			dataService.saveNeedle(needle);
+			// $scope.getNeedles();
 		};
 
 		// Delete needle and remove from list

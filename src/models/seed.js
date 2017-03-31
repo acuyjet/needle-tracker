@@ -1,7 +1,7 @@
 'use strict';
 
 // Import Needle model
-var Needle = require('./models/needle.js');
+var Needle = require('./needle.model.js');
 
 var needles = [
 	{

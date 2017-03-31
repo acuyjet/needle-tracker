@@ -10,9 +10,14 @@ angular.module('needle-tracker')
 		};
 
 		// Save a needle
-		this.saveNeedle = function(needle) {
-			console.log(needle + ' has been saved!');
-			// DB logic goes here
+		this.saveNeedle = function(needle, callback) {
+			if(!needle._id) {
+				$http.post('/api/needles, person')
+						.then(callback);
+			} else {
+				$http.put('/api/needles/' + needle._id, needle)
+						.then(callback);
+			}
 		};
 
 		// Delete a needle
