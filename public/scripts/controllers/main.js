@@ -5,8 +5,8 @@ angular.module('needle-tracker')
 
 		// Get list of needles
 		dataService.getNeedles(function(response) {
-			console.log(response.data);
-			$scope.needles = response.data;
+			var needles = response.data.needles;
+			$scope.needles = needles;
 		});
 
 		// Add a needle

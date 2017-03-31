@@ -2,9 +2,10 @@
 
 angular.module('needle-tracker')
 	.service('dataService', function($http) {
+
 		// Get list of needles
 		this.getNeedles = function(callback) {
-			$http.get('mock/needles.json')
+			$http.get('api/needles')
 					.then(callback)
 		};
 

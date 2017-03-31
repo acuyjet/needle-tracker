@@ -1,4 +1,4 @@
 'use strict';
 
-// Create Angular app
+// Create new Angular module
 angular.module("needle-tracker", []);
