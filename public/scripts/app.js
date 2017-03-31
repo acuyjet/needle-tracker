@@ -4,27 +4,22 @@
 angular.module("needle-tracker", [])
 		.controller('mainCtrl', function($scope, dataService) {
 
-			// $scope.addNeedle = function() {
-			// 	console.log('Needle added to list!');
-			// };
-
-			// $scope.getNeedles = function() {
-			// 	console.log('A list of needles!');
-			// };
-
-			// $scope.editNeedle = function() {
-			// 	console.log('Edited a needle!')
-			// };
-
-			// $scope.deleteNeedle = function() {
-			// 	console.log('Needle deleted!');
-			// };
-
 			// Get list of needles
 			dataService.getNeedles(function(response) {
 				console.log(response.data);
 				$scope.needles = response.data;
 			});
+
+			// Add a needle
+			$scope.addNeedle = function() {
+				var needle = {
+					size: 'US 11',
+					type: 'Double-pointed',
+					material: 'Plastic',
+					notes: 'Don\'t use these for much'
+				}
+				$scope.needles.push(needle);
+			};
 
 			// Save a needle
 			$scope.saveNeedle = function(needle) {
