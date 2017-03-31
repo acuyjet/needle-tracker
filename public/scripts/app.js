@@ -8,12 +8,33 @@ angular.module("needle-tracker", [])
 
 			$scope.needles = [
 				{
-
+					"size": "US 6",
+					"type": "Straight",
+					"material": "Wood",
+					"notes": "10 in. Splintery and weird."
+				},
+				{
+					"size": "US 0",
+					"type": "Double-pointed",
+					"material": "Bamboo",
+					"notes": "Crystal Palace brand. Great for socks!"
+				},
+				{
+					"size": "US 2",
+					"type": "Circular",
+					"material": "Metal",
+					"notes": "Addi Turbo brand, 10 in."
+				},
+				{
+					"size": "US 9",
+					"type": "Straight",
+					"material": "Bamboo",
+					"notes": "Crystal Palace brand, 14 in."
 				}
 			];
 
-			$scope.saveForm = function() {
-				console.log('Form saved!');
+			$scope.addNeedle = function() {
+				console.log('Needle added to list!');
 			};
 
 			$scope.needleList = function() {
@@ -21,7 +42,7 @@ angular.module("needle-tracker", [])
 			};
 
 			$scope.editNeedle = function() {
-				console.log('Editing a needle!')
+				console.log('Edited a needle!')
 			};
 
 			$scope.deleteNeedle = function() {

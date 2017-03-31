@@ -8,6 +8,9 @@
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--Custom CSS-->
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+
     <title>Needle Tracker</title>
 </head>
 <body ng-app="needle-tracker">
@@ -31,32 +34,33 @@
             </div>
             <div class="input-field inline">
                 <input ng-model="needle.material "id="material" type="text" placeholder="Material">
-                <label></label>
+                <label for="material"></label>
             </div>
             <div class="row">
                 <div class="input-field col s6">
-                    <textarea ng-model="needle.notes" id="notes" class="materialize-textarea"></textarea>
+                    <input ng-model="needle.notes" id="notes" class="materialize-textarea"></input>
                     <label for="notes">Notes:</label>
                 </div>
             </div>
             <div class="row">
-                <button ng-click="saveForm()" class="btn waves-effect waves-light save" type="submit" name="action">Save
+                <button ng-click="addNeedle()" class="btn waves-effect waves-light save" type="submit" name="action">Add Needle
                 </button>
             </div>
         </form>
         <div class="needle-list col s12">Your needles:
             <ul class="collection">
-                <li class="collection-item">
-                    {{needle.size}}
+                <li ng-repeat="needle in needles" class="collection-item">
+                    <input ng-hide="!editing" ng-model="needle.size" type="text" value="{{needle.size}}"><span ng-hide="editing">{{needle.size}}</span>
                     <br>
-                    {{needle.type}}
+                    <input ng-hide="!editing" ng-model="needle.type" type="text" value="{{needle.type}}"><span ng-hide="editing">{{needle.type}}</span>
                     <br>
-                    {{needle.material}}
+                    <input ng-hide="!editing" ng-model="needle.material" type="text" value="{{needle.materia}}"><span ng-hide="editing">{{needle.material}}</span>
                     <br>
-                    {{needle.notes}}
+                    <input ng-hide="!editing" ng-model="needle.notes" type="text" value="{{needle.notes}}"><span ng-hide="editing">{{needle.notes}}</span>
                     <a ng-click="deleteNeedle()" class="secondary-content waves-effect waves-red btn-flat delete">Delete</a>
-                    <a ng-click="editing = !editing"
+                    <a ng-click="editing = !editing" ng-hide="editing"
                         class=" secondary-content waves-effect waves-teal btn-flat edit">Edit</a>
+                    <a ng-click="editing = !editing" ng-click="editNeedle()" ng-show="editing" class=" secondary-content waves-effect waves-teal btn-flat edit">Save</a>
                 </li>
             </ul>
         </div>
