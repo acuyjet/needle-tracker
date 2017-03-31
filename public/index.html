@@ -14,65 +14,16 @@
     <title>Needle Tracker</title>
 </head>
 <body ng-app="needle-tracker">
-<div ng-controller="mainCtrl" class="container">
-    <div class="row">
-        <h5>Knitting Needle Inventory</h5>
-    </div>
-    <div class="row">
-        <p>Instead of accidentally buying your fifth set of size 7 16" circulars because you have no idea what you've
-            got in your stash, enter your tools here:</p>
-    </div>
-    <div class="row">
-        <form class="needle-entry">
-            <div class="input-field inline">
-                <input ng-model="needle.size" id="size" type="text" placeholder="Size">
-                <label for="size"></label>
-            </div>
-            <div class="input-field inline">
-                <input ng-model="needle.type" id="type" type="text" placeholder="Type">
-                <label for="type"></label>
-            </div>
-            <div class="input-field inline">
-                <input ng-model="needle.material "id="material" type="text" placeholder="Material">
-                <label for="material"></label>
-            </div>
-            <div class="row">
-                <div class="input-field col s6">
-                    <input ng-model="needle.notes" id="notes" type="text" placeholder="Notes:"></input>
-                    <label for="notes"></label>
-                </div>
-            </div>
-            <div class="row">
-                <button ng-click="addNeedle()" class="btn waves-effect waves-light save" type="submit" name="action">Add Needle
-                </button>
-            </div>
-        </form>
-        <div class="needle-list col s12">Your needles:
-            <ul class="collection">
-                <li ng-repeat="needle in needles" class="collection-item">
-                    <input ng-hide="!editing" ng-model="needle.size" type="text" value="{{needle.size}}"><span ng-hide="editing">{{needle.size}}</span>
-                    <br>
-                    <input ng-hide="!editing" ng-model="needle.type" type="text" value="{{needle.type}}"><span ng-hide="editing">{{needle.type}}</span>
-                    <br>
-                    <input ng-hide="!editing" ng-model="needle.material" type="text" value="{{needle.materia}}"><span ng-hide="editing">{{needle.material}}</span>
-                    <br>
-                    <input ng-hide="!editing" ng-model="needle.notes" type="text" value="{{needle.notes}}"><span ng-hide="editing">{{needle.notes}}</span>
-                    <a ng-click="deleteNeedle(needle, $index)" class="secondary-content waves-effect waves-red btn-flat delete">Delete</a>
-                    <!--Show Edit or Save button depending on whether editing is true or not-->
-                    <a ng-click="editing = !editing" ng-hide="editing"
-                        class=" secondary-content waves-effect waves-teal btn-flat edit">Edit</a>
-                    <a ng-click="saveNeedle(needle); editing = !editing"  ng-show="editing" class=" secondary-content waves-effect waves-teal btn-flat edit">Save</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+<div class="container">
+    <needles></needles>
 </div>
     <!--Scripts-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="scripts/materialize.min.js"></script>
     <script src="scripts/app.js" type="text/javascript"></script>
     <script src="scripts/controllers/main.js" type="text/javascript"></script>
     <script src="scripts/services/data.js" type="text/javascript"></script>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="scripts/materialize.min.js"></script>
+    <script src="scripts/directives/needles.js" type="text/javascript"></script>
 </body>
 </html>
