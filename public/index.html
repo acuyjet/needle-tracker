@@ -58,6 +58,7 @@
                     <br>
                     <input ng-hide="!editing" ng-model="needle.notes" type="text" value="{{needle.notes}}"><span ng-hide="editing">{{needle.notes}}</span>
                     <a ng-click="deleteNeedle()" class="secondary-content waves-effect waves-red btn-flat delete">Delete</a>
+                    <!--Show Edit or Save button depending on whether editing is true or not-->
                     <a ng-click="editing = !editing" ng-hide="editing"
                         class=" secondary-content waves-effect waves-teal btn-flat edit">Edit</a>
                     <a ng-click="editing = !editing" ng-click="editNeedle()" ng-show="editing" class=" secondary-content waves-effect waves-teal btn-flat edit">Save</a>
