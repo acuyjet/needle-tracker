@@ -1,21 +1,38 @@
 'use strict';
 
 // Import Needle model
-var Needle = require('./models/needle');
+var Needle = require('./models/needle.js');
 
 var needles = [
 	{
-		size: 'US 8',
-		type: 'straight',
-		material: 'bamboo',
+		size: 'US 1',
+		type: 'Double-pointed',
+		material: 'Metal',
+		notes: 'Best for socks'
+	},
+	{
+		size: 'US 7',
+		type: 'Straight',
+		material: 'Bamboo',
 		notes: 'Crystal Palace brand'
+	},
+	{
+		size: 'US 8',
+		type: 'Circular',
+		material: 'Wood',
+		notes: '16 in.'
 	}
 ];
 
-needles.forEach(function(needle, index) {
-	Needle.find({ 'size': needle }, function(err, needles) {
-		if(!err && !needles.length) {
-			Needle.create({ size: needle });
+Needle.count({}, function(err, count) {
+	if(err) {
+		throw err;
+	}
+	if (count > 0) return;
+	Needle.create(needles, function(err, newNeedles) {
+		if(err) {
+			throw err;
 		}
-	});
+		console.log('Database seeded!');
+	})
 });
