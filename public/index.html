@@ -43,7 +43,7 @@
                 </div>
             </div>
             <div class="row">
-                <button ng-click="addNeedle()" class="btn waves-effect waves-light save" type="submit" name="action">Add Needle
+                <button ng-click="saveNeedle(needle)" class="btn waves-effect waves-light save" type="submit" name="action">Add Needle
                 </button>
             </div>
         </form>
@@ -57,11 +57,11 @@
                     <input ng-hide="!editing" ng-model="needle.material" type="text" value="{{needle.materia}}"><span ng-hide="editing">{{needle.material}}</span>
                     <br>
                     <input ng-hide="!editing" ng-model="needle.notes" type="text" value="{{needle.notes}}"><span ng-hide="editing">{{needle.notes}}</span>
-                    <a ng-click="deleteNeedle()" class="secondary-content waves-effect waves-red btn-flat delete">Delete</a>
+                    <a ng-click="deleteNeedle(needle, $index)" class="secondary-content waves-effect waves-red btn-flat delete">Delete</a>
                     <!--Show Edit or Save button depending on whether editing is true or not-->
                     <a ng-click="editing = !editing" ng-hide="editing"
                         class=" secondary-content waves-effect waves-teal btn-flat edit">Edit</a>
-                    <a ng-click="editing = !editing" ng-click="editNeedle()" ng-show="editing" class=" secondary-content waves-effect waves-teal btn-flat edit">Save</a>
+                    <a ng-click="saveNeedle(needle); editing = !editing"  ng-show="editing" class=" secondary-content waves-effect waves-teal btn-flat edit">Save</a>
                 </li>
             </ul>
         </div>
