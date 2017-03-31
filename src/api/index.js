@@ -10,7 +10,7 @@ var router = express.Router();
 router.get('/needles', function(req, res) {
 	Needle.find({}, function(err, needles){
 		if(err) {
-			res.status(500).json({ message: err.message });
+			return res.status(500).json({ message: err.message });
 		}
 		res.json({ needles: needles });
 	});
