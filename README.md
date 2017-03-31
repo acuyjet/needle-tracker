@@ -17,15 +17,13 @@ MongoDB
 
         cd needle-tracker
     
-3. Start MongoDB:
+3. Run `npm install`
 
-        mongod
-    
-4. In a new command line tab, start the app:
-    
-        npm start
+4. In a new command line tab, start `mongodb`
 
-5. Open a browser window and go to `localhost:3000`.
+5. In another tab, run `node src/app.js`
+
+6. Open a browser window and go to `localhost:3000`.
 
 ##### Issues to address:
 * Change text box inputs back to dropdown selectors and figure out how to get them to work well with Angular
